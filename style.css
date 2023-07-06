@@ -1,0 +1,26 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #dde6ed;
+}
+#projects {
+  background-color: #dde6ed;
+}
+.card {
+  min-height: 430px;
+}
+.card-img-top {
+  min-height: 170px;
+}
+footer {
+  background-color: #27374d;
+}
+section {
+  padding-top: 7rem;
+}
+.icon-logo {
+  width: 30px;
+}
+.icon-logo-link {
+  width: 20px;
+  opacity: 80%;
+}
