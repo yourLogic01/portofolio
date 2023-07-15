@@ -275,20 +275,20 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form id="contact-form">
+            <form onsubmit="sendMessage()" id="contact-form">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Nama Lengkap" required />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Email Address" required />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
                 <textarea class="form-control" id="pesan" rows="3"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-primary px-4">Kirim</button>
             </form>
           </div>
         </div>
@@ -326,6 +326,16 @@
       }
 
       addActiveClass();
+
+      function sendMessage() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const pesan = document.getElementById("pesan").value;
+
+        const url = `https://api.whatsapp.com/send?phone=6281775457350&text=halo%20Asyifa%20Maulana%2C%20%0Asaya%20*${name}*%0Adengan%20email%20%3A%20*${email}*%0A%0A*${pesan}*`;
+
+        window.open(url);
+      }
     </script>
   </body>
 </html>
